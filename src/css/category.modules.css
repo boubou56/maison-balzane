@@ -1,0 +1,27 @@
+.row{
+    padding: 10;
+    margin: 10;
+  }
+  
+  section .images{
+    padding: 10;
+    margin: 10;
+  }
+
+  section .btn.btn-outline-secondary{
+align-content: centrer;
+margin: 0 5 0 5;
+padding: 5;
+  }
+
+article .hommeseo.col6{
+    margin: 10;
+    padding: 10;
+}
+article .hommeseo.h2{
+    align-content: center;
+}
+
+article .hommeseo.p{
+    
+}
