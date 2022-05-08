@@ -1,5 +1,12 @@
 import * as React from 'react'
 import parse from "html-react-parser"
+import { bandeau, 
+  livraison,
+  blocHeader,
+  menuprincipal,
+  menuToggle,
+  logo,
+  menu,} from '../css/header.modules.css'
 
 // Step 1: Import the useStaticQuery hook and graphql tag
 import { useStaticQuery, graphql } from 'gatsby'
@@ -18,20 +25,20 @@ const Header = () => {
     }
   `)
   return (
-    <header className="bandeau">
+    <header className={bandeau}>
       
-      <section className="livraison">
+      <section className={livraison}>
                <p> Livraison Gratuite en France métropolitaine à partir de 150€ d'achat </p>
       </section>    
 
-      <div class="bloc-header">
-              <nav className="menuprincipal">
+      <div class={blocHeader}>
+              <nav className={menuprincipal}>
 
-              <label className="menu-toggle" for="menu-toggle"></label>
+              <label className={menuToggle} for="menu-toggle"></label>
               <input type="checkbox" className="menu-toggle"/>
-              <StaticImage className="logo" alt="XXXXXXX" src="../images/Logo-allonge.jpg"> </StaticImage>
+              <StaticImage className={logo} alt="XXXXXXX" src="../images/Logo-allonge.jpg"> </StaticImage>
 
-              <ul className="menu">
+              <ul className={menu}>
 
                   <li><Link to="/index">Accueil</Link></li>
                   <li><Link to="/homme">Homme</Link></li>

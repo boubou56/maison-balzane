@@ -1,4 +1,10 @@
 import * as React from 'react'
+import { pied, 
+  bas,
+  gauche,
+  milieu,
+  droite,
+  colonne,} from '../css/footer.modules.css'
 
 
 // Step 1: Import the useStaticQuery hook and graphql tag
@@ -18,41 +24,35 @@ const Footer = () => {
     }
   `)
   return (
-    <footer class="pied">
+    <footer classNameName={pied}>
 
-     <div class="bas">
+     <div className={bas}>
     
     
-         <ul class="gauche">
-            <li><a href="page-faq.php">FAQ</a></li>
-            <li><a href="page-guidetailles.php">Guide des tailles</a></li>
-            <li><a href="page-plansite.php">Plan du site</a></li>
+         <ul className={gauche}>
+            <li><Link to="page-faq.php">FAQ</Link></li>
+            <li><Link to="page-guidetailles.php">Guide des tailles</Link></li>
+            <li><Link to="page-plansite.php">Plan du site</Link></li>
         </ul>
     
-        <ul class="milieu"> 
-            <a href="reseauxsociaux">Réseaux Sociaux</a>
-            <li><a href="#">Réseaux Sociaux</a></li>
-            <li><a href="#">Live Shopping</a></li>
-            <li><a href="page-revendeur.php">Devenir revendeur</a></li>
+        <ul className={milieu}> 
+            <Link to="reseauxsociaux">Réseaux Sociaux</Link>
+            <li><Link to="#">Réseaux Sociaux</Link></li>
+            <li><Link to="#">Live Shopping</Link></li>
+            <li><Link to="page-revendeur.php">Devenir revendeur</Link></li>
         </ul>           
     
-        <ul class="droite">
-            <li><a href="page-politiquesconf.php">Politiques de confidentialités</a></li>
-            <li><a href="page-cgv.php">Conditions Générales des Ventes</a></li>
-            <li><a href="page-rgpd.php">Protection des Données</a></li>
+        <ul className={droite}>
+            <li><Link to="page-politiquesconf.php">Politiques de confidentialités</Link></li>
+            <li><Link to="page-cgv.php">Conditions Générales des Ventes</Link></li>
+            <li><Link to="pLinkge-rgpd.php">Protection des Données</Link></li>
         </ul>
     
     </div>  
+
+     <div className={colonne}>
     
-    
-    <div class='monfooter'>
-    
-     
-    </div>
-    
-    <div class="colonne">
-    <a href="#bandeau"><img src="images-garden/flechehaut.png"/></a>
-    <p>&copy; B@o Design - 2022 - <a href="#">Mentions légales</a></p>
+    <p>&copy; B@o Design - 2022 - <Link to="#">Mentions légales</Link></p>
     </div>
 
     
