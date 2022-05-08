@@ -26,14 +26,24 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url:
-          `https://maisonbalzane.4lw.fr/graphql`,
-          debug: {
-            graphql: {
-              showQueryVarsOnError: true,
-              showQueryOnError: true,
-            },
+        url: `https://maisonbalzane.4lw.fr/graphql`,
+        verbose: true,
+        schema: {
+          perPage: 20, // currently set to 100
+          requestConcurrency: 5, // currently set to 15
+          previewRequestConcurrency: 2, // currently set to 5
+        },    
+        debug: {
+          graphql: {
+            showQueryOnError: true,
+            showQueryVarsOnError: true,
+            copyQueryOnError: true,
+            panicOnError: true,
+            // a critical error is a WPGraphQL query that returns an error and no response data. Currently WPGQL will error if we try to access private posts so if this is false it returns a lot of irrelevant errors.
+            onlyReportCriticalErrors: true,
           },
+        },
+        excludeFieldNames: [`blocksJSON`, `saveContent`],
       },
     },
 
