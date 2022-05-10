@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout';
+
 export default function Component(props) {
   return (
     <Layout>
-      {JSON.stringify(props.data.wpProduct)}
+      {JSON.stringify(props?.data?.wpCategory)}
     </Layout>
     )
   }
@@ -13,14 +14,16 @@ export default function Component(props) {
 // to connect to this GraphQL query.
 export const query = graphql`
   query($id: String) {
-    wpProduct(id: { eq: $id }) {
+    wpCategory(id: { eq: $id }) {
       id
     name
-    onSale
-    sku
-    image {
-      height
-      sourceUrl
+    slug
+    wpParent {
+      node {
+        id
+        slug
+        
+      }
     }
     }
   }

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
 import { bandeau, 
   livraison,
@@ -9,7 +10,7 @@ import { bandeau,
   menu,} from '../css/header.modules.css'
 
 // Step 1: Import the useStaticQuery hook and graphql tag
-import { useStaticQuery, graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 const Header = () => {
 
   /* Step 2: Use the useStaticQuery hook and

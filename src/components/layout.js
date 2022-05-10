@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql, globalWrapper } from "gatsby"
+
 import parse from "html-react-parser"
 
 import Header from './header'

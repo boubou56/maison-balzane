@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { pied, 
   bas,
   gauche,
@@ -8,7 +9,7 @@ import { pied,
 
 
 // Step 1: Import the useStaticQuery hook and graphql tag
-import { useStaticQuery, graphql } from 'gatsby'
+
 const Footer = () => {
 
   /* Step 2: Use the useStaticQuery hook and
