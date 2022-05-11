@@ -7,7 +7,7 @@ import { bandeau,
   menuprincipal,
   menuToggle,
   logo,
-  menu,} from '../css/header.modules.css'
+  menu,} from '../css/header.module.css'
 
 // Step 1: Import the useStaticQuery hook and graphql tag
 import { StaticImage } from 'gatsby-plugin-image'
@@ -47,21 +47,15 @@ const Header = () => {
                   <li><Link to="/accessoires">Accessoires</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
                   <li><Link to="apropos">À propos</Link></li>
-                  <li><Link to="#"><i class="fa-solid fa-magnifying-glass"></i></Link></li>
-                  <li><Link to="#"><i class="fa-solid fa-user"></i></Link></li>
-                  <li><Link to="#"><i class="fa-solid fa-cart-shopping"></i></Link></li>
+                  <li><Link to="#">search<i class="fa-solid fa-magnifying-glass"></i></Link></li>
+                  <li><Link to="#">compte<i class="fa-solid fa-user"></i></Link></li>
+                  <li><Link to="#">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
               </ul>
 
               </nav> 
 
-        
-          <title>Home Page</title>
-                <h1>Maison Balzane, La mode responsable!</h1>
-
-                <p> lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum . </p>
+          
       </div>
-
-      /* Step 3: Use the data in your component */
 
       <h1>{ data.site.siteMetadata.title }</h1>
     </header>

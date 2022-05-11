@@ -1,0 +1,52 @@
+
+/*.pied {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:98%;
+	list-style-type: none;
+	
+}*/
+  .bas{
+          display: flex;
+          flex-direction:row;
+          justify-content: space-between;
+          width: 98%; 
+          color: white;
+    line-height: 20px;
+    background-color: #333;
+    padding: 0.2rem;
+    width: 100%;
+  }
+  
+      .bas ul li
+    {
+        list-style-type: none;     
+        
+      }
+  
+      .bas ul li a{
+        color: #f5f5f5;
+        
+      }
+  
+      .bas ul li a:hover{
+        color: navajowhite;
+        
+      }
+
+   .colonne{
+          display: flex;
+          justify-content: center;
+          background-color: #333;
+      }
+
+      .colonne{
+        color: navajowhite;
+  
+      }
+  
+      .colonne a{
+          color:#f5f5f5;
+    
+      }

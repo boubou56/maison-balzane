@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql, globalWrapper } from "gatsby"
+import { Link, useStaticQuery, graphql} from "gatsby"
+import {globalWrapper } from "../css/layout.module.css"
 
 import parse from "html-react-parser"
 
@@ -26,11 +27,11 @@ const Layout = ({ isHomePage, children }) => {
     <div className={globalWrapper} data-is-root-path={isHomePage}>
 
       <Header />
-
+        
       <main>{children}</main>
 
       <Footer />
-
+      
     </div>
   )
 }

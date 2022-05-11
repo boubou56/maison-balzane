@@ -8,8 +8,9 @@ import { titreproduit,
           coupeproduit, 
           tailleproduit,
           matiereproduit,
-  } from '../../css/product.modules.css'
-export default function Component(props) {
+          descriptionproduit,
+  } from '../../css/ProductPage.module.css'
+export default function ProductPage(props) {
   const {//champs de premier niveau
     id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description
   } = props?.data?.wpProduct;
@@ -38,7 +39,9 @@ export default function Component(props) {
         <p className={matiereproduit}>{matiere.name}</p>
       ))} 
 
-      {parse(description)}
+      <div className={descriptionproduit}>
+        {parse(description)}
+      </div>
 
     </Layout>
     )

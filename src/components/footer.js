@@ -5,7 +5,7 @@ import { pied,
   gauche,
   milieu,
   droite,
-  colonne,} from '../css/footer.modules.css'
+  colonne,} from '../css/footer.module.css'
 
 
 // Step 1: Import the useStaticQuery hook and graphql tag
@@ -37,7 +37,7 @@ const Footer = () => {
         </ul>
     
         <ul className={milieu}> 
-            <Link to="reseauxsociaux">Réseaux Sociaux</Link>
+            
             <li><Link to="#">Réseaux Sociaux</Link></li>
             <li><Link to="#">Live Shopping</Link></li>
             <li><Link to="page-revendeur.php">Devenir revendeur</Link></li>

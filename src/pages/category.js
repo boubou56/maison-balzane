@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import { StaticImage } from 'gatsby-plugin-image'
 import {  hommeseo,
          images,
-         } from '../css/category.modules.css'
+         } from '../css/category.module.css'
          
 		const CategoryPage = () => {
   		return (
