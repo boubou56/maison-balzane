@@ -1,16 +1,45 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout';
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
+import { titreproduit, 
+          couleurproduit,
+          coupeproduit, 
+          tailleproduit,
+          matiereproduit,
+  } from '../../css/product.modules.css'
 export default function Component(props) {
-  const {
-    id, name, sku 
+  const {//champs de premier niveau
+    id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description
   } = props?.data?.wpProduct;
+  const myImage = getImage(image.localFile)
 
+  console.log (props?.data?.wpProduct)
   return (
     <Layout>
-      <h2>{name}</h2>
+      <h2 className={titreproduit}>{name}</h2>
       <pre>{JSON.stringify(props?.data?.wpProduct)}</pre>
+      <GatsbyImage image={myImage} alt={image.alText} />
+
+      {allPaCouleur.nodes.map(couleur => (
+        <p className={couleurproduit}>{couleur.slug}</p>
+      ))} 
+
+      {allPaCoupe.nodes.map(Coupe => (
+        <p className={coupeproduit}>{Coupe.name}</p>
+      ))} 
+
+      {allPaTaille.nodes.map(taille => (
+        <p className={tailleproduit}>{taille.name}</p>
+      ))} 
+
+      {allPaMatiere.nodes.map(matiere => (
+        <p className={matiereproduit}>{matiere.name}</p>
+      ))} 
+
+      {parse(description)}
+
     </Layout>
     )
   }
@@ -21,6 +50,8 @@ export const query = graphql`
   query($id: String) {
     wpProduct(id: { eq: $id }) {
      id
+     name
+     sku
     slug
     image {
       localFile {
@@ -28,7 +59,32 @@ export const query = graphql`
         gatsbyImageData(width: 200)
       }
       }
+      altText
     }
+    allPaCouleur {
+      nodes {
+        id
+        name
+        slug
+      }
+    }
+    allPaCoupe {
+      nodes {
+        name
+      }
+    }
+    allPaTaille {
+      nodes {
+        name
+        slug
+      }
+    }
+    allPaMatiere {
+      nodes {
+        name
+      }
+    }
+    description
   }  
   }
 `
