@@ -3,7 +3,8 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import Header from './header'
+import Footer from './footer'
 import { StaticImage } from 'gatsby-plugin-image'
 import { bandeau, 
          livraison,
@@ -12,50 +13,17 @@ import { bandeau,
          menuToggle,
          logo,
          menu,} from '../css/index.modules.css'
-         
-		const IndexPage = () => {
-  		return (
 
-   		<main>
 
-            <header className={bandeau} >
 
-            <section className={livraison}>
-                     <p> Livraison Gratuite en France métropolitaine à partir de 150€ d'achat </p>
-            </section>    
+	const IndexPage = () => {
+  	return (
 
-            <div className={blocHeader}>
-                    <nav className={menuprincipal}>
+   	<main>
 
-                    <label className={menuToggle} for="menu-toggle"></label>
-                    <input type="checkbox" className={menuToggle}/>
-                    <StaticImage className={logo} alt="XXXXXXX" src="../images/Logo-allonge.jpg"> </StaticImage>
+        <Header />
 
-                    <ul className={menu}>
-
-                        <li><Link to="/index">Accueil</Link></li>
-                        <li><Link to="/homme">Homme</Link></li>
-                        <li><Link to="/femme">Femme</Link></li>
-                        <li><Link to="/accessoires">Accessoires</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="apropos">À propos</Link></li>
-                        <li><Link to="#"><i class="fa-solid fa-magnifying-glass"></i></Link></li>
-                        <li><Link to="#"><i class="fa-solid fa-user"></i></Link></li>
-                        <li><Link to="#"><i class="fa-solid fa-cart-shopping"></i></Link></li>
-                    </ul>
-
-                    </nav> 
-  
-              
-                <title>Home Page</title>
-     				 <h1>Maison Balzane, La mode responsable!</h1>
-
-    				  <p> lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum . </p>
-            </div>
-
-            </header> 
-
-            <div id="moncarousel" class="carousel slide" data-ride="carousel">
+        <div id="moncarousel" class="carousel slide" data-ride="carousel">
 
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -89,11 +57,11 @@ import { bandeau,
             </a>
 
             <a class="carousel-control-next" href="#moncarousel" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Suivant</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
             </a>
 
-            </div>    
+        </div>    
 
              <div id="boutoncarousel" class="margincontenu"> 
 
@@ -138,6 +106,165 @@ import { bandeau,
             <button type="button" class="btn btn-outline-secondary">Notre selection</button>
             </div>
 
+            <div class="top-content">
+
+            <div class="container-fluid">
+                <div id="carousel-lastchance" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Marine.jpg" class="img-fluid mx-auto d-block" alt="img1"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Blanc.jpg" class="img-fluid mx-auto d-block" alt="img2"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-gris.jpg" class="img-fluid mx-auto d-block" alt="img3"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Noir-.jpg" class="img-fluid mx-auto d-block" alt="img4"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Blanc.jpg" class="img-fluid mx-auto d-block" alt="img5"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Gris.jpg" class="img-fluid mx-auto d-block" alt="img6"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Zip-Gris-R.jpgg" class="img-fluid mx-auto d-block" alt="img7"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Zip-Noir-R.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Blanc-.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Gris.jpgg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Marine.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Marine.jpg" class="img-fluid mx-auto d-block" alt="img1"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Blanc.jpg" class="img-fluid mx-auto d-block" alt="img2"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-gris.jpg" class="img-fluid mx-auto d-block" alt="img3"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Tshirt-Noir-.jpg" class="img-fluid mx-auto d-block" alt="img4"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Blanc.jpg" class="img-fluid mx-auto d-block" alt="img5"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Gris.jpg" class="img-fluid mx-auto d-block" alt="img6"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Zip-Gris-R.jpgg" class="img-fluid mx-auto d-block" alt="img7"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Sweat-Zip-Noir-R.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Blanc-.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Gris.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                            <img src="http://localhost/wptest-boucar/wp-content/uploads/2022/04/Bas-Marine.jpg" class="img-fluid mx-auto d-block" alt="img8"/>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="texteseo" class="row">
+
+            <article class="seo col-6">
+                <h2>Des <strong>accessoires éthiques</strong> dans vos dressings</h2>
+                <p class='article1'>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsive</p>
+            </article>
+
+            <article class="seo col-6">
+                <h2>Des <strong>vêtements écoresponsables</strong> dans vos dressings</h2>
+                <p class='article2'>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsive</p>
+            </article>
+
+        </div>
+
+        <div id="catalogue" class="row">
+            
+            <article class="decouverte col-6">
+                <a href="#"><img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Pull-Vert.jpg" alt="pull vert" class="img-fluid"/></a>   
+                <h3>BLA BLA SEO </h3>
+                <button type="button" class="btn btn-outline-secondary">Découvrez</button>
+            </article>
+
+            <article class="decouverte col-6">
+                <a href="#"><img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Pull-Rose-R1.jpg" alt="pull vert" class="img-fluid"/></a>   
+                <h3>BLA BLA SEO </h3>
+                <button type="button" class="btn btn-outline-secondary">Découvrez</button>
+            </article>    
+         
+
+        </div>
+
+        <div class="valeurs">
+            
+            <button type="button" class="btnvaleurs btn btn-outline-secondary">Nos valeurs</button>
+           
+
+            <div id="valeurs">
+
+                <article class="nosvaleurs">
+                    <h3> Valeur 1 </h3>
+                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                </article>
+
+                <article class="nosvaleurs">
+                    <h3> Valeur 2 </h3>
+                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                </article>
+
+                <article class="nosvaleurs">
+                    <h3> Valeur 3 </h3>
+                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                </article>
+
+                <article class="nosvaleurs">
+                    <h3> Valeur 4 </h3>
+                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="reassurance">
+
+            <button type="button" class="btn btn-outline-secondary">Livraison et retour</button>
+            <button type="button" class="btn btn-outline-secondary">Paiement sécurisé</button>
+            <button type="button" class="btn btn-outline-secondary">Suivi de Commande</button>
+            <button type="button" class="btn btn-outline-secondary">Service client</button>
+        
+        </div>   
+
+
+    <Footer />
 
 </main>
 

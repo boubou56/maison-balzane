@@ -13,6 +13,49 @@ module.exports = {
    * Gatsby has a rich ecosystem of plugins.
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
+
+   siteMetadata: {
+    title: 'my-wordpress-gatsby-site',
+      menuLinks:[
+        {
+           name:'Accueil',
+           link:'/index'
+        },
+        {
+           name:'Homme',
+           link:'/homme'
+        },
+        {
+          name:'Femme',
+          link:'/femme'
+       },
+       {
+        name:'Accessoires',
+        link:'/accessoires'
+     },
+     {
+      name:'Contact',
+      link:'/contact'
+   },
+   {
+    name:'A propos',
+    link:'/about'
+ },
+ {
+  name:'search',
+  link:'/search'
+},
+{
+  name:'connexion',
+  link:'/connexion'
+},
+{
+  name:'cart',
+  link:'/cart'
+}
+      ]
+    },
+   
   plugins: [
     {
       /**

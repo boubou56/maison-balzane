@@ -4,8 +4,8 @@ import {globalWrapper } from "../css/layout.module.css"
 
 import parse from "html-react-parser"
 
-import Header from './header'
-import Footer from './footer'
+import Header from '../pages/header'
+import Footer from '../pages/footer'
 
 const Layout = ({ isHomePage, children }) => {
   const {

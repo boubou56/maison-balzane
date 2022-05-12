@@ -6,6 +6,7 @@ export default function Component(props) {
   return (
     <Layout>
       {JSON.stringify(props?.data?.wpCategory)}
+     
     </Layout>
     )
   }
