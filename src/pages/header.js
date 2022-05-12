@@ -7,7 +7,7 @@ import { bandeau,
   menuprincipal,
   menuToggle,
   logo,
-  menu,} from '../css/header.module.css'
+  menu,titreh1} from '../css/header.module.css'
 
 // Step 1: Import the useStaticQuery hook and graphql tag
 import { StaticImage } from 'gatsby-plugin-image'
@@ -57,7 +57,7 @@ const Header = () => {
           
       </div>
 
-      <h1>{ data.site.siteMetadata.title }</h1>
+      <h1 className={titreh1}>{ data.site.siteMetadata.title }</h1>
     </header>
   )
 }

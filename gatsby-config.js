@@ -15,7 +15,7 @@ module.exports = {
    */
 
    siteMetadata: {
-    title: 'my-wordpress-gatsby-site',
+    title: 'Maison Balzane',
       menuLinks:[
         {
            name:'Accueil',
@@ -101,7 +101,14 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/content/assets`,
-      },
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+        name: `backgrounds`,
+      path: `${__dirname}/src/images`, // wherever background images are stored
+      },  
     },
 
     /**

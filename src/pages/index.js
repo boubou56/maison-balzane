@@ -6,13 +6,19 @@ import { Link, graphql } from "gatsby"
 import Header from './header'
 import Footer from './footer'
 import { StaticImage } from 'gatsby-plugin-image'
-import { bandeau, 
-         livraison,
-         blocHeader,
-         menuprincipal,
-         menuToggle,
-         logo,
-         menu,} from '../css/index.modules.css'
+import { titreprincipal, 
+         menulastchance,
+         lastchance,
+         texteseo,
+         seo,
+         catalogue,
+         decouverte,
+         valeurs,
+        nosvaleurs,
+        btnvaleurs,
+        reassurance,
+        boutoncarousel,margincontenu,
+        boutonselection, animation,} from '../css/index.module.css'
 
 
 
@@ -34,7 +40,7 @@ import { bandeau,
 
             <div class="carousel-caption d-none d-md-block">
 
-                <span class="titre">
+                <span className={titreprincipal}>
                     <h1>La mode responsable</h1>
                     <h2>Des vêtements <strong>éthiques</strong> avec des accessoires <strong>écoresponsables</strong> qui durent plus longtemps</h2>
                 </span>
@@ -63,45 +69,45 @@ import { bandeau,
 
         </div>    
 
-             <div id="boutoncarousel" class="margincontenu"> 
+             <div className= {margincontenu} class="margincontenu"> 
 
-                    <div class="boutoncarousel">
+                    <div className= {boutoncarousel}>
                         <button type="button" class="btn btn-outline-secondary">nouveautés</button>
                     </div>  
 
-                    <div class="boutoncarousel">
+                    <div className= {boutoncarousel}>
                          <button type="button" class="btn btn-outline-secondary">Lire notre charte</button>
                     </div>
 
-                    <div class="boutoncarousel">
+                    <div className= {boutoncarousel}>
                         <button type="button" class="btn btn-outline-secondary">collabs</button>
                     </div>  
 
             </div>
     	
-            <div class="animation">
+            <div className= {animation}>
         <span > 
             <button type="button" class="btn btn-outline-secondary">Animation</button> 
         </span>
             </div>
 
-            <nav id="menulastchance">
+            <nav className={menulastchance}>
 
                 <label class="menu-toggle2" for="menu-toggle2">Dernières tailles</label>
                 <input type="checkbox" id="menu-toggle2"/>
 
-                <ul class="lastchance ">
-                    <li><a href="#">Sweatshirts</a></li>
-                    <li><a href="#">Tshirts et Polos</a></li>
-                    <li><a href="#">Accessoires eco responsables</a></li>
-                    <li><a href="#">Chemises et tops</a></li>
-                    <li><a href="#">Robes et Jupes</a></li>
-                    <li><a href="#">Pantalons et shorts</a></li>
+                <ul className={lastchance}>
+                    <li><Link to="/lastchance">Sweatshirts</Link></li>
+                    <li><Link to="/lastchance">Tshirts et Polos</Link></li>
+                    <li><Link to="/lLinkstchance">Accessoires eco responsables</Link></li>
+                    <li><Link to="/lastchance">Chemises et tops</Link></li>
+                    <li><Link to="/lastchance">Robes et Jupes</Link></li>
+                    <li><Link to="/lastchance">Pantalons et shorts</Link></li>
                 </ul>
 
             </nav>
 
-            <div class="boutonselection" >
+            <div className={boutonselection}>
 
             <button type="button" class="btn btn-outline-secondary">Notre selection</button>
             </div>
@@ -192,29 +198,29 @@ import { bandeau,
         </div>
         
 
-        <div id="texteseo" class="row">
+        <div className={texteseo} row>
 
-            <article class="seo col-6">
+            <article className={seo} col-6>
                 <h2>Des <strong>accessoires éthiques</strong> dans vos dressings</h2>
                 <p class='article1'>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsive</p>
             </article>
 
-            <article class="seo col-6">
+            <article className={seo} col-6>
                 <h2>Des <strong>vêtements écoresponsables</strong> dans vos dressings</h2>
                 <p class='article2'>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time. The plugin also supports responsive</p>
             </article>
 
         </div>
 
-        <div id="catalogue" class="row">
+        <div className={catalogue} row>
             
-            <article class="decouverte col-6">
+            <article className={decouverte} col-6>
                 <a href="#"><img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Pull-Vert.jpg" alt="pull vert" class="img-fluid"/></a>   
                 <h3>BLA BLA SEO </h3>
                 <button type="button" class="btn btn-outline-secondary">Découvrez</button>
             </article>
 
-            <article class="decouverte col-6">
+            <article className={decouverte} col-6>
                 <a href="#"><img src="http://localhost/wptest-boucar/wp-content/uploads/2022/03/Pull-Rose-R1.jpg" alt="pull vert" class="img-fluid"/></a>   
                 <h3>BLA BLA SEO </h3>
                 <button type="button" class="btn btn-outline-secondary">Découvrez</button>
@@ -223,29 +229,29 @@ import { bandeau,
 
         </div>
 
-        <div class="valeurs">
+        <div className={btnvaleurs}>
             
             <button type="button" class="btnvaleurs btn btn-outline-secondary">Nos valeurs</button>
            
 
-            <div id="valeurs">
+            <div className={valeurs}>
 
-                <article class="nosvaleurs">
+                <article className={nosvaleurs}>
                     <h3> Valeur 1 </h3>
                     <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
                 </article>
 
-                <article class="nosvaleurs">
+                <article className={nosvaleurs}>
                     <h3> Valeur 2 </h3>
                     <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
                 </article>
 
-                <article class="nosvaleurs">
+                <article className={nosvaleurs}>
                     <h3> Valeur 3 </h3>
                     <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
                 </article>
 
-                <article class="nosvaleurs">
+                <article className={nosvaleurs}>
                     <h3> Valeur 4 </h3>
                     <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
                 </article>
@@ -254,7 +260,7 @@ import { bandeau,
 
         </div>
 
-        <div class="reassurance">
+        <div className={reassurance}>
 
             <button type="button" class="btn btn-outline-secondary">Livraison et retour</button>
             <button type="button" class="btn btn-outline-secondary">Paiement sécurisé</button>

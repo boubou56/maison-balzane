@@ -46,7 +46,7 @@ const Header = () => {
                   <li><Link to="/femme">Femme</Link></li>
                   <li><Link to="/accessoires">Accessoires</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
-                  <li><Link to="apropos">À propos</Link></li>
+                  <li><Link to="/about">À propos</Link></li>
                   <li><Link to="#">search<i class="fa-solid fa-magnifying-glass"></i></Link></li>
                   <li><Link to="#">compte<i class="fa-solid fa-user"></i></Link></li>
                   <li><Link to="#">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
@@ -57,7 +57,7 @@ const Header = () => {
           
       </div>
 
-      <h1>{ data.site.siteMetadata.title }</h1>
+      <h1 className={titreh1}>{ data.site.siteMetadata.title }</h1>
     </header>
   )
 }

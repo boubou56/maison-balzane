@@ -1,0 +1,166 @@
+
+main{
+  background-color: #f5f5f5;
+}
+
+.bandeau {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  margin:0;
+  }
+
+.bandeau .p{
+white-space: nowrap;
+}
+
+section.livraison{
+  color: white;
+  line-height: 30px;
+  background-color: #333;
+  padding: 0.2rem;
+  width: 100%;
+}
+
+section.livraison p{
+  margin:0;
+  text-align: center;
+}
+
+.menuprincipal{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 10px 20px;
+}
+
+.logo{
+width: 50px;
+}
+
+.menuprincipal{
+  text-align: center;
+}
+
+
+.menuprincipal ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.menuprincipal ul li{
+  margin: 0 1rem;
+}
+
+.menuprincipal ul li a{
+  color: #000;
+  font-weight: bold;
+} 
+ 
+.menu .sub-menu{
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  /*opacity: 0;*/
+  /*padding: 20px 20px 20px 0;*/
+ /* padding-left: 0;
+        left: 0;*/
+  font-size: 0.8rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 10;
+}
+
+.menu li:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  min-width: 200px;
+  text-align: center;
+  padding-top: 20px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+} 
+
+.titreprincipal h1{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 3em;
+  margin-top: 8rem;
+  color: black;
+}
+
+.titreprincipal h2 {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5rem; 
+  margin-bottom: 10rem;
+  color: black;
+}
+
+.margincontenu{
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: Uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px;
+  background-color: red;
+}
+
+.menulastchance{
+  display: flex;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+position: sticky;
+
+  box-sizing: border-box;
+      background-color: white;
+      width: 100%;
+      border: 1px solid #f5f5f5;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+      transition: 0.3s;
+      margin-bottom: 15px;
+    }
+
+.menulastchance label{
+font-family: 'Roboto', sans-serif;
+margin-top: 20px;
+margin-left: 5px;
+font-weight: bold;
+font-size: 1rem;
+}
+
+.menulastchance ul{
+  font-family: 'Montserrat Alternates', sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-top: 20px;
+
+}
+
+.menulastchance ul li{
+  margin: 0 1.5rem;
+}
+
+#menulastchance ul li a{
+  color: #000;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: lowercase;
+}

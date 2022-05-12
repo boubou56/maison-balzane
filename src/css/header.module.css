@@ -32,6 +32,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px 20px;
+  background-color: red;
   }
   
   .logo{
@@ -88,3 +89,7 @@
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
   } 
+  .titreh1{
+    align-content: center;
+    margin: auto;
+  }
