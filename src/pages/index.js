@@ -238,22 +238,22 @@ import { titreprincipal,
 
                 <article className={nosvaleurs}>
                     <h3> Valeur 1 </h3>
-                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                    <p>multiple items per slide and advances one slide at a time. and advances one slide at a time.</p>
                 </article>
 
                 <article className={nosvaleurs}>
                     <h3> Valeur 2 </h3>
-                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                    <p>multiple items per slide and advances one slide at a time.  advances one slide at a time.</p>
                 </article>
 
                 <article className={nosvaleurs}>
                     <h3> Valeur 3 </h3>
-                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                    <p>multiple items per slide and advances one slide at a time.  advances one slide at a time.</p>
                 </article>
 
                 <article className={nosvaleurs}>
                     <h3> Valeur 4 </h3>
-                    <p>multiple items per slide and advances one slide at a time. The plugin also supports responsivemultiple items per slide and advances one slide at a time.</p>
+                    <p>multiple items per slide and advances one slide at a time. and advances one slide at a time.</p>
                 </article>
 
             </div>

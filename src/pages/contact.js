@@ -21,9 +21,14 @@ import { } from '../css/contact.module.css'
                 <input type="text" name="prenom" placeholder="Prenom"/>
             </label>
             <label>
-                <input type="email" name="email" placeholder="Entrer votre Email"/></label>
+                <input type="text" name="boutique" Placeholder="Nom de votre boutique"/>
+            </label>
             <label>
-                <input type="text" name="boutique" Placeholder="Entrer la ville de votre boutique"/></label>
+                <input type="text" name="boutique" Placeholder="Entrer la ville de votre boutique"/>
+            </label>
+            <label>
+                <input type="email" name="email" placeholder="Entrer votre Email"/>
+                </label>
             <label>
                 <input type="text" name="objet" Placeholder="Objet de votre message"/>
             </label>

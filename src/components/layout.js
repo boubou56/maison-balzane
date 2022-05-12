@@ -7,11 +7,13 @@ import parse from "html-react-parser"
 import Header from '../pages/header'
 import Footer from '../pages/footer'
 
+
 const Layout = ({ isHomePage, children }) => {
   const {
     wp: {
       generalSettings: { title },
     },
+    
   } = useStaticQuery(graphql`
     query LayoutQuery {
       wp {
