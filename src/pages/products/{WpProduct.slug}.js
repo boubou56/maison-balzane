@@ -10,12 +10,13 @@ import { titreproduit,
           tailleproduit,
           matiereproduit,
           descriptionproduit,
+          priceproduit,
   } from '../../css/ProductPage.module.css'
 
 export default function ProductPage(props) {
 
   const {//champs de premier niveau
-    id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description
+    id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description, price
   } = props?.data?.wpProduct;
   const myImage = getImage(image.localFile)
 
@@ -26,6 +27,8 @@ export default function ProductPage(props) {
       <h2 className={titreproduit}>{name}</h2>
       {/*<pre>{JSON.stringify(props?.data?.wpProduct)}</pre>*/}
       <GatsbyImage image={myImage} alt={image.alText} />
+
+      <div className={priceproduit}>{price}</div>
 
       {allPaCouleur.nodes.map(couleur => (
         <p className={couleurproduit}>{couleur.slug}</p>
@@ -42,6 +45,8 @@ export default function ProductPage(props) {
       {allPaMatiere.nodes.map(matiere => (
         <p className={matiereproduit}>{matiere.name}</p>
       ))} 
+
+    
 
       <div className={descriptionproduit}>
         {parse(description)}
@@ -67,6 +72,9 @@ export const query = graphql`
       }
       }
       altText
+    }
+    ... on WpSimpleProduct {
+      price
     }
     allPaCouleur {
       nodes {
