@@ -101,16 +101,17 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/content/assets`,
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-        name: `backgrounds`,
-      path: `${__dirname}/src/images`, // wherever background images are stored
+       
       },  
     },
 
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `backgrounds`,
+          path: `${__dirname}/src/images`, // wherever background images are stored
+        },
+      },
     /**
      * The following two plugins are required if you want to use Gatsby image
      * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image

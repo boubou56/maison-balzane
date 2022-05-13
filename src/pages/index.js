@@ -3,8 +3,7 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Header from './header'
-import Footer from './footer'
+import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { titreprincipal, 
          menulastchance,
@@ -25,9 +24,7 @@ import { titreprincipal,
 	const IndexPage = () => {
   	return (
 
-   	<main>
-
-        <Header />
+   	<Layout>
 
         <div id="moncarousel" class="carousel slide" data-ride="carousel">
 
@@ -270,9 +267,9 @@ import { titreprincipal,
         </div>   
 
 
-    <Footer />
+    
 
-</main>
+</Layout>
 
  		)
 }

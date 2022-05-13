@@ -90,6 +90,5 @@
     -o-transition: 0.2s;
   } 
   .titreh1{
-    align-content: center;
-    margin: auto;
+    justify-content: center;
   }

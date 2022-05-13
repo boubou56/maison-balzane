@@ -1,6 +1,5 @@
 import React from "react"
-import Header from './header'
-import Footer from './footer'
+import Layout from "../components/layout"
 import { } from '../css/contact.module.css'
 
 
@@ -8,9 +7,9 @@ import { } from '../css/contact.module.css'
 	const ContactPage = () => {
   	return (
 
-   	<main>
+   	<Layout>
 
-        <Header />
+       
 
         <form method="post" action="#">
             ...
@@ -43,9 +42,8 @@ import { } from '../css/contact.module.css'
             ...          
         </form>
 
-        <Footer />
 
-    </main>
+    </Layout>
 
  		)
 }

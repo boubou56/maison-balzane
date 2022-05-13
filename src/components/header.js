@@ -3,11 +3,8 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
 import { bandeau, 
   livraison,
-  blocHeader,
-  menuprincipal,
-  menuToggle,
-  logo,
-  menu,} from '../css/header.module.css'
+  blocHeader,titreh1} from '../css/header.module.css'
+  import NavBar from './nav-bar'
 
 // Step 1: Import the useStaticQuery hook and graphql tag
 import { StaticImage } from 'gatsby-plugin-image'
@@ -33,28 +30,8 @@ const Header = () => {
       </section>    
 
       <div class={blocHeader}>
-              <nav className={menuprincipal}>
-
-              <label className={menuToggle} for="menu-toggle"></label>
-              <input type="checkbox" className="menu-toggle"/>
-              <StaticImage className={logo} alt="XXXXXXX" src="../images/Logo-allonge.jpg"> </StaticImage>
-
-              <ul className={menu}>
-
-                  <li><Link to="/index">Accueil</Link></li>
-                  <li><Link to="/homme">Homme</Link></li>
-                  <li><Link to="/femme">Femme</Link></li>
-                  <li><Link to="/accessoires">Accessoires</Link></li>
-                  <li><Link to="/contact">Contact</Link></li>
-                  <li><Link to="/about">À propos</Link></li>
-                  <li><Link to="#">search<i class="fa-solid fa-magnifying-glass"></i></Link></li>
-                  <li><Link to="#">compte<i class="fa-solid fa-user"></i></Link></li>
-                  <li><Link to="#">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
-              </ul>
-
-              </nav> 
-
-          
+              <NavBar/>
+      
       </div>
 
       <h1 className={titreh1}>{ data.site.siteMetadata.title }</h1>

@@ -1,3 +1,4 @@
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout';
@@ -10,17 +11,20 @@ import { titreproduit,
           matiereproduit,
           descriptionproduit,
   } from '../../css/ProductPage.module.css'
+
 export default function ProductPage(props) {
+
   const {//champs de premier niveau
     id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description
   } = props?.data?.wpProduct;
   const myImage = getImage(image.localFile)
 
   console.log (props?.data?.wpProduct)
+
   return (
     <Layout>
       <h2 className={titreproduit}>{name}</h2>
-      <pre>{JSON.stringify(props?.data?.wpProduct)}</pre>
+      {/*<pre>{JSON.stringify(props?.data?.wpProduct)}</pre>*/}
       <GatsbyImage image={myImage} alt={image.alText} />
 
       {allPaCouleur.nodes.map(couleur => (
@@ -52,7 +56,7 @@ export default function ProductPage(props) {
 export const query = graphql`
   query($id: String) {
     wpProduct(id: { eq: $id }) {
-     id
+     
      name
      sku
     slug
