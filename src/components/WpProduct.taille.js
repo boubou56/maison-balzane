@@ -6,7 +6,7 @@ import {
   tailleproduit,
 } from '../../css/ProductPage.module.css'
 
-export default function ProductallPaTaille() {
+export default function ProductTaille() {
 
   return (
     <div className={tailleproduit}>
