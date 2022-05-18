@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
@@ -8,7 +9,10 @@ import {
 
 export default function SimpleProductPage() {
   return (
+    
+    <Layout>
     <div className={priceproduit}> {props.price} </div>
+    </Layout>
   )
 }
 export const query = graphql`

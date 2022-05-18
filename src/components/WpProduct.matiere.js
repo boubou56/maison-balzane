@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
@@ -8,12 +9,14 @@ import {
 
 export default function ProductMatierePage() {
   return (
+
+    <Layout>
     <div className={matiereproduit}>
       {allPaMatiere.nodes.map(matiere => (
         <p className={matiereproduit}>{matiere.name}</p>
       ))}
-
     </div>
+    </Layout>
   )
 }
 

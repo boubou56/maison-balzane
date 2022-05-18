@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
@@ -9,11 +10,13 @@ import {
 export default function ProductTaille() {
 
   return (
+    <Layout>
     <div className={tailleproduit}>
       {allPaTaille.nodes.map(taille => (
         <p className={tailleproduit}>{taille.name}</p>
       ))}
     </div>
+    </Layout>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
@@ -14,7 +15,10 @@ export default function ProductTitlePage() {
 
 
   return (
+    
+    <Layout>
     <h2 className={titreproduit}>{name.sku.slug}</h2>
+    </Layout>
   )
 }
 

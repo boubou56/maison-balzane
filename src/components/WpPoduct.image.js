@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
@@ -12,11 +13,12 @@ export default function ProductImagePage() {
 
 
     return (
+
+        <Layout>
         <div className={myimage}>{props.image.localFile.childImageData}
-
             <GatsbyImage image={myImage} alt={image.alText} />
-
         </div>
+        </Layout>
     )
 }
 
