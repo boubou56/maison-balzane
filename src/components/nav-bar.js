@@ -24,6 +24,7 @@ export default function NavBar() {
     <li><Link to="#">search<i class="fa-solid fa-magnifying-glass"></i></Link></li>
     <li><Link to="#">compte<i class="fa-solid fa-user"></i></Link></li>
     <li><Link to="#">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
+    
 </ul>
 
 </nav>  

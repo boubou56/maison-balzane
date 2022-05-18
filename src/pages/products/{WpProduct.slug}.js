@@ -12,6 +12,14 @@ import { titreproduit,
           descriptionproduit,
           priceproduit,
   } from '../../css/ProductPage.module.css'
+  
+import ProductTitlePage from "../../components/WpProduct.title";
+import ProductMatierePage from "../../components/WpProduct.matiere";
+import ProductImagePage from "../../components/WpProduct.title";
+import SimpleProductPage from "../../components/WpProduct.matiere";
+import ProductCouleurPage from "../../components/WpProduct.title";
+import ProductTaillePage from "../../components/WpProduct.matiere";
+import ProductDescriptionPage from "../../components/WpProduct.title";
 
 export default function ProductPage(props) {
 
@@ -24,32 +32,39 @@ export default function ProductPage(props) {
 
   return (
     <Layout>
-      <h2 className={titreproduit}>{name}</h2>
+      <h2 className={titreproduit}>
+      
+              <ProductTitlePage/>
+     
+      </h2>
       {/*<pre>{JSON.stringify(props?.data?.wpProduct)}</pre>*/}
-      <GatsbyImage image={myImage} alt={image.alText} />
 
-      <div className={priceproduit}>{price}</div>
+      <div className={myImage}>
+              <ProductImagePage/>
+      </div>
 
-      {allPaCouleur.nodes.map(couleur => (
-        <p className={couleurproduit}>{couleur.slug}</p>
-      ))} 
+      <div className={priceproduit}>
+              <SimpleProductPage/>
+      </div>
+
+      <div className={couleurproduit}>
+            <ProductCouleurPage/>
+        </div>
 
       {allPaCoupe.nodes.map(Coupe => (
         <p className={coupeproduit}>{Coupe.name}</p>
       ))} 
 
-      {allPaTaille.nodes.map(taille => (
-        <p className={tailleproduit}>{taille.name}</p>
-      ))} 
+      <div className={tailleproduit}>
+            <ProductTaillePage/>
+        </div>
 
-      {allPaMatiere.nodes.map(matiere => (
-        <p className={matiereproduit}>{matiere.name}</p>
-      ))} 
-
-    
+      <div className={matiereproduit}>
+            <ProductMatierePage/>
+        </div>
 
       <div className={descriptionproduit}>
-        {parse(description)}
+            <ProductDescriptionPage/>
       </div>
 
     </Layout>

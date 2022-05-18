@@ -5,6 +5,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { titreprincipal, 
          menulastchance,
          lastchance,

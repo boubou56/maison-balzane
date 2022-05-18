@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { bandeau, 
   livraison,
   blocHeader,titreh1} from '../css/header.module.css'

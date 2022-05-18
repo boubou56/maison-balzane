@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql} from "gatsby"
 import {globalWrapper } from "../css/layout.module.css"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import parse from "html-react-parser"
 
 import Header from './header'

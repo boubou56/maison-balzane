@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from "gatsby"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { pied, 
   bas,
   gauche,
