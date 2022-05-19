@@ -5,10 +5,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   descriptionproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
 export default function ProductDescriptionPage() {
-
+  console.log(props.data.wpProduct)
   return (
     <Layout>
     <div className={descriptionproduit}>

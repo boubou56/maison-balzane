@@ -5,13 +5,14 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   priceproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
-export default function SimpleProductPage() {
+export default function SimpleProductPage(props) {
+  console.log(props.data.wpProduct)
   return (
     
     <Layout>
-    <div className={priceproduit}> {props.price} </div>
+    <div className={priceproduit}> {props.props.price} </div>
     </Layout>
   )
 }

@@ -5,10 +5,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   tailleproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
-export default function ProductTaille() {
-
+export default function ProductTaillePage(props) {
+  console.log(props.data.wpProduct)
   return (
     <Layout>
     <div className={tailleproduit}>

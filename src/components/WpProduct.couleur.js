@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   couleurproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
 export default function ProductCouleurPage() {
 
@@ -32,5 +32,6 @@ export const query = graphql`
         slug
       }
     }
+  }
   }
   `

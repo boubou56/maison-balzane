@@ -5,11 +5,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   matiereproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
-export default function ProductMatierePage() {
+export default function ProductMatierePage(props) {
+  console.log(props.data.wpProduct)
   return (
-
     <Layout>
     <div className={matiereproduit}>
       {allPaMatiere.nodes.map(matiere => (

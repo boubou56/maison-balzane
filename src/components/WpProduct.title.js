@@ -5,14 +5,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   titreproduit,
-} from '../../css/ProductPage.module.css'
+} from '../components/ProductPage.module.css'
 
-export default function ProductTitlePage() {
+export default function ProductTitlePage(props) {
 
   const {//champs de premier niveau
     id, name, sku,
   } = props.data.wpProduct;
 
+  console.log(props.data.wpProduct)
 
   return (
     

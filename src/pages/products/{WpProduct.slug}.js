@@ -16,10 +16,10 @@ import { titreproduit,
 import ProductTitlePage from "../../components/WpProduct.title";
 import ProductMatierePage from "../../components/WpProduct.matiere";
 import ProductImagePage from "../../components/WpProduct.title";
-import SimpleProductPage from "../../components/WpProduct.matiere";
-import ProductCouleurPage from "../../components/WpProduct.title";
-import ProductTaillePage from "../../components/WpProduct.matiere";
-import ProductDescriptionPage from "../../components/WpProduct.title";
+import SimpleProductPage from "../../components/WpProduct.image";
+import ProductCouleurPage from "../../components/WpProduct.couleur";
+import ProductTaillePage from "../../components/WpProduct.taille";
+import ProductDescriptionPage from "../../components/WpProduct.description";
 
 export default function ProductPage(props) {
 

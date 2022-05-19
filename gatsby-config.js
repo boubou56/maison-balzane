@@ -57,6 +57,7 @@ module.exports = {
     },
    
   plugins: [
+    
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby
@@ -112,6 +113,7 @@ module.exports = {
           path: `${__dirname}/src/images`, // wherever background images are stored
         },
       },
+
     /**
      * The following two plugins are required if you want to use Gatsby image
      * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
@@ -136,6 +138,7 @@ module.exports = {
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
+    
 
     /**
      * this (optional) plugin enables Progressive Web App + Offline functionality
@@ -146,6 +149,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    
   
   ],
 }
