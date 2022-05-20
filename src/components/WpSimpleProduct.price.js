@@ -3,23 +3,23 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
-  couleurproduit,
+  priceproduit,
 } from '../components/ProductPage.module.css'
 
-export default function ProductCouleur({ couleurs }) {
-
-  console.log("ProductCouleur", couleurs)
+export default function SimpleProductPrice({ prices }) {
+  console.log("SimpleProduct", prices)
   return (
-    <div className={couleurproduit}>
 
-      {couleurs.map(function (couleur) {
+    <div className={priceproduit}>
+      {prices.map(function (price) {
         return (
-          <div className={`${couleur}`}> </div>
+          <div className={`${price}`}></div>
         )
       }
-      )}
+      )
+      }
     </div>
+    
   )
 }
-
-
+    

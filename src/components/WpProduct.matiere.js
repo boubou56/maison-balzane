@@ -1,34 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   matiereproduit,
 } from '../components/ProductPage.module.css'
 
-export default function ProductMatierePage(props) {
-  console.log(props.data.wpProduct)
+export default function ProductMatiere({ matieres }) {
+  console.log ("ProductMatiere", matieres)
   return (
-    <Layout>
     <div className={matiereproduit}>
-      {allPaMatiere.nodes.map(matiere => (
-        <p className={matiereproduit}>{matiere.name}</p>
+      {matieres.map(matiere => (
+        <p className={matiereproduit}>{matiere}</p>
       ))}
     </div>
-    </Layout>
   )
 }
 
-
-export const query = graphql`
-        query($id: String) {
-          wpProduct(id: { eq: $id }) {
-          allPaMatiere {
-            nodes {
-              name
-            }
-          }
-        }
-      }
-      `

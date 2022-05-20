@@ -15,17 +15,36 @@ import { titreproduit,
   
 import ProductTitlePage from "../../components/WpProduct.title";
 import ProductMatierePage from "../../components/WpProduct.matiere";
-import ProductImagePage from "../../components/WpProduct.title";
-import SimpleProductPage from "../../components/WpProduct.image";
+import ProductImagePage from "../../components/WpProduct.image";
 import ProductCouleurPage from "../../components/WpProduct.couleur";
 import ProductTaillePage from "../../components/WpProduct.taille";
 import ProductDescriptionPage from "../../components/WpProduct.description";
+import SimpleProductPricePage from "../../components/WpSimpleProduct.price";
 
 export default function ProductPage(props) {
 
   const {//champs de premier niveau
     id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description, price
   } = props?.data?.wpProduct;
+
+  const listeCouleurs = allPaCouleur.nodes.map(function(elementTableau){
+    return elementTableau.slug
+  })
+
+  const listeTailles = allPaTaille.nodes.map(function(elementTaille){
+    return {
+      slug: elementTaille.slug,
+      name: elementTaille.name,
+    }
+  })
+
+  const listeMatieres = allPaMatiere.nodes.map(function(elementMatiere){
+    return elementMatiere.name
+  })
+
+  const listePrix = price.map(function(elementPrix){
+    return elementPrix.price
+  })  
   const myImage = getImage(image.localFile)
 
   console.log (props?.data?.wpProduct)
@@ -34,21 +53,21 @@ export default function ProductPage(props) {
     <Layout>
       <h2 className={titreproduit}>
       
-              <ProductTitlePage/>
+              <ProductTitlePage title={name} sku={sku} />
      
       </h2>
       {/*<pre>{JSON.stringify(props?.data?.wpProduct)}</pre>*/}
 
       <div className={myImage}>
-              <ProductImagePage/>
+              <ProductImagePage image={image} />
       </div>
 
       <div className={priceproduit}>
-              <SimpleProductPage/>
+              <SimpleProductPricePage price={listePrix}/>
       </div>
 
       <div className={couleurproduit}>
-            <ProductCouleurPage/>
+            <ProductCouleurPage couleurs={listeCouleurs} />
         </div>
 
       {allPaCoupe.nodes.map(Coupe => (
@@ -56,15 +75,15 @@ export default function ProductPage(props) {
       ))} 
 
       <div className={tailleproduit}>
-            <ProductTaillePage/>
+            <ProductTaillePage tailles={listeTailles} />
         </div>
 
       <div className={matiereproduit}>
-            <ProductMatierePage/>
+            <ProductMatierePage matieres={listeMatieres} />
         </div>
 
       <div className={descriptionproduit}>
-            <ProductDescriptionPage/>
+            <ProductDescriptionPage description={description}/>
       </div>
 
     </Layout>
@@ -80,6 +99,7 @@ export const query = graphql`
      name
      sku
     slug
+
     image {
       localFile {
       childImageSharp {
