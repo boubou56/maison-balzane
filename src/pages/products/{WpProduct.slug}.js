@@ -10,7 +10,7 @@ import { titreproduit,
           tailleproduit,
           matiereproduit,
           descriptionproduit,
-          priceproduit,
+          // priceproduit,
   } from '../../css/ProductPage.module.css'
   
 import ProductTitlePage from "../../components/WpProduct.title";
@@ -19,7 +19,7 @@ import ProductImagePage from "../../components/WpProduct.image";
 import ProductCouleurPage from "../../components/WpProduct.couleur";
 import ProductTaillePage from "../../components/WpProduct.taille";
 import ProductDescriptionPage from "../../components/WpProduct.description";
-import SimpleProductPricePage from "../../components/WpSimpleProduct.price";
+
 
 export default function ProductPage(props) {
 
@@ -40,11 +40,8 @@ export default function ProductPage(props) {
 
   const listeMatieres = allPaMatiere.nodes.map(function(elementMatiere){
     return elementMatiere.name
-  })
-
-  const listePrix = price.map(function(elementPrix){
-    return elementPrix.price
   })  
+
   const myImage = getImage(image.localFile)
 
   console.log (props?.data?.wpProduct)
@@ -53,17 +50,12 @@ export default function ProductPage(props) {
     <Layout>
       <h2 className={titreproduit}>
       
-              <ProductTitlePage title={name} sku={sku} />
+              <ProductTitlePage title={name} sku={sku} price={price}/>
      
       </h2>
-      {/*<pre>{JSON.stringify(props?.data?.wpProduct)}</pre>*/}
 
       <div className={myImage}>
               <ProductImagePage image={image} />
-      </div>
-
-      <div className={priceproduit}>
-              <SimpleProductPricePage price={listePrix}/>
       </div>
 
       <div className={couleurproduit}>

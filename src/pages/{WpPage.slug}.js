@@ -1,31 +1,18 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from '../../components/layout';
+import Layout from '../components/layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import { titrepage, 
         contenupage,
-  } from '../../css/Page.module.css'
+  } from '../css/Page.module.css'
 
 export default function Page(props) {
 
   const {//champs de premier niveau
-    id, title, content
+    id
   } = props?.data?.wpPage;
-
-  const lestitres = Page.nodes.map(function(elementPage){
-    return {
-        title: elementPage.title,
-    }
-  })
-
-  const lescontenus = Page.nodes.map(function(elementPage){
-    return {
-        title: elementPage.title,
-
-    }
-  })
 
   console.log (props?.data?.wpPage)
 
@@ -33,12 +20,12 @@ export default function Page(props) {
     <Layout>
       <h2 className={titrepage}>
       
-              <PageTitlePage title={lestitres} />
+              {/* <PageTitlePage title={lestitres} /> */}
      
       </h2>
 
       <div className={contenupage}>
-              <PageContentPage content={lescontenus}/>
+              {/* <PageContentPage content={lescontenus}/> */}
       </div>
 
     </Layout>
@@ -50,10 +37,9 @@ export default function Page(props) {
 export const query = graphql`
   query($id: String) {
     wpPage(id: { eq: $id }) {
-    nodes {
-      content
-      title
-    }
+    id 
+    slug
+    content
   }
   }
 `
