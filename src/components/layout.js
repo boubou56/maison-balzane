@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql} from "gatsby"
-import {globalWrapper } from "../css/layout.module.css"
+import {globalWrapper, main } from "../css/layout.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import parse from "html-react-parser"
 
@@ -30,7 +30,7 @@ const Layout = ({ isHomePage, children }) => {
 
       <Header />
         
-      <main>{children}</main>
+      <main className={main}>{children}</main>
 
       <Footer />
       

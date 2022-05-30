@@ -4,7 +4,6 @@
 display: flex;
 flex-direction: row;
 justify-content: flex-end;
-margin-top: 150px;
 }
 .titreproduit{
 text-transform: uppercase;
@@ -37,14 +36,23 @@ width: 100%;
 
 /*Couleur PRODUIT*/
 .couleurproduit{
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-margin-top: 0px;
-border: solid 1.5px rgb(143, 10, 10);
-padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0px;
+    border: solid 1.5px rgb(143, 10, 10);
+    padding: 50px;
+}
 
-} 
+.couleursContairner > div{
+    width: 2em;
+    height: 2em;
+}
+
+.couleursContairner .gris{
+    background-color: gray;
+}
+
 
 .couleur.slug{
 border: solid 1.5px rgb(143, 10, 10);

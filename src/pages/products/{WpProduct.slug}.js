@@ -11,6 +11,7 @@ import {
   tailleproduit, 
   matiereproduit, 
   descriptionproduit, containerproduit,
+  myimage as imageclass,
   // priceproduit,
 } from '../../css/ProductPage.module.css'
 
@@ -53,8 +54,8 @@ export default function ProductPage(props) {
 
       <div className={containerproduit}>
 
-        <div className={myImage}>
-          <ProductImagePage image={image} />
+        <div className={imageclass}>
+          <ProductImagePage image={myImage} />
         </div>
 
         <div>

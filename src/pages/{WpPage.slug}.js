@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import { titrepage, 
         contenupage,
-  } from '../css/Page.module.css'
+  } from '../css/page.module.css'
 
 export default function Page(props) {
 
