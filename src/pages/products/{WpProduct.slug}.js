@@ -4,15 +4,16 @@ import { Link, graphql } from "gatsby"
 import Layout from '../../components/layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
-import { titreproduit, 
-          couleurproduit,
-          coupeproduit, 
-          tailleproduit,
-          matiereproduit,
-          descriptionproduit,
-          // priceproduit,
-  } from '../../css/ProductPage.module.css'
-  
+import {
+  titreproduit,
+  couleurproduit, 
+  coupeproduit,
+  tailleproduit, 
+  matiereproduit, 
+  descriptionproduit, containerproduit,
+  // priceproduit,
+} from '../../css/ProductPage.module.css'
+
 import ProductTitlePage from "../../components/WpProduct.title";
 import ProductMatierePage from "../../components/WpProduct.matiere";
 import ProductImagePage from "../../components/WpProduct.image";
@@ -27,60 +28,72 @@ export default function ProductPage(props) {
     id, name, sku, image, allPaCouleur, allPaCoupe, allPaTaille, allPaMatiere, description, price
   } = props?.data?.wpProduct;
 
-  const listeCouleurs = allPaCouleur.nodes.map(function(elementTableau){
+  const listeCouleurs = allPaCouleur.nodes.map(function (elementTableau) {
     return elementTableau.slug
   })
 
-  const listeTailles = allPaTaille.nodes.map(function(elementTaille){
+  const listeTailles = allPaTaille.nodes.map(function (elementTaille) {
     return {
       slug: elementTaille.slug,
       name: elementTaille.name,
     }
   })
 
-  const listeMatieres = allPaMatiere.nodes.map(function(elementMatiere){
+  const listeMatieres = allPaMatiere.nodes.map(function (elementMatiere) {
     return elementMatiere.name
-  })  
+  })
 
   const myImage = getImage(image.localFile)
 
-  console.log (props?.data?.wpProduct)
+  console.log(props?.data?.wpProduct)
 
   return (
+
     <Layout>
-      <h2 className={titreproduit}>
-      
-              <ProductTitlePage title={name} sku={sku} price={price}/>
+
+      <div className={containerproduit}>
+
+        <div className={myImage}>
+          <ProductImagePage image={image} />
+        </div>
+
+        <div>
+              <h2 className={titreproduit}>
+                <ProductTitlePage title ={name} sku ={sku} price ={price} />
+              </h2>
+        </div> 
+        
+      </div>
+
+          <span className={couleurproduit}>
+            <ProductCouleurPage couleurs ={listeCouleurs} />
+          </span>
+
+          <span className={tailleproduit}>
+            <ProductTaillePage tailles ={listeTailles} />
+          </span>
+
+
+        {allPaCoupe.nodes.map(Coupe => (
+          <p className={coupeproduit}>{Coupe.name}</p>
+        ))}
+
+
+
+        <div className={matiereproduit}>
+          <ProductMatierePage matieres={listeMatieres} />
+        </div>
+
+        <div className={descriptionproduit}>
+          <ProductDescriptionPage description={description} />
+        </div>
+
      
-      </h2>
 
-      <div className={myImage}>
-              <ProductImagePage image={image} />
-      </div>
+    </Layout >
 
-      <div className={couleurproduit}>
-            <ProductCouleurPage couleurs={listeCouleurs} />
-        </div>
-
-      {allPaCoupe.nodes.map(Coupe => (
-        <p className={coupeproduit}>{Coupe.name}</p>
-      ))} 
-
-      <div className={tailleproduit}>
-            <ProductTaillePage tailles={listeTailles} />
-        </div>
-
-      <div className={matiereproduit}>
-            <ProductMatierePage matieres={listeMatieres} />
-        </div>
-
-      <div className={descriptionproduit}>
-            <ProductDescriptionPage description={description}/>
-      </div>
-
-    </Layout>
-    )
-  }
+  )
+}
 // This is the page query that connects the data to the actual component. Here you can query for any and all fields
 // you need access to within your code. Again, since Gatsby always queries for `id` in the collection, you can use that
 // to connect to this GraphQL query.

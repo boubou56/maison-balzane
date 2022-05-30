@@ -1,105 +1,108 @@
-.titleproduit{
-    display: inline-flex;
-    border: solid 0.5px black;
+/*Titre sku prix*/
+
+.containerproduit{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+margin-top: 150px;
 }
 .titreproduit{
-    padding-top: 10px;
-    margin-top: 300px;
-    color: black;    
+text-transform: uppercase;
+color: brown;
+width: 100%;
+justify-content: flex-end;
 }
-.sku {
-    padding-top: 20px;
-    margin-top: 500px;
-    color: black;
-    
+.psku{
+    margin: auto;
 }
 
-.priceproduit {
-    padding-top: 10px;
-    margin-top: 300px;
-    color: black;
-    border: solid 0.5px black;
+.priceprduit{
+    margin: auto;
 }
 
+/*Image PRODUIT*/
+
+.myimage{
+bottom: 0;
+height: 100%;
+left: 0;
+margin: 0;
+max-width: none;
+padding: 0;
+position: absolute;
+right: 0;
+top: 0;
+width: 100%;
+}
+
+/*Couleur PRODUIT*/
 .couleurproduit{
-    border: solid 0.5px black;
-    margin: 2px ;
-    display: inline-flex;
-    padding: 10px;
-}
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+margin-top: 0px;
+border: solid 1.5px rgb(143, 10, 10);
+padding: 50px;
 
-.couleurproduit .noir{
-    background-color: black;
-}
+} 
 
-.couleurproduit .marine{
-    background-color: #1c2747;
-}
+.couleur.slug{
+border: solid 1.5px rgb(143, 10, 10);
+} 
 
-.couleurproduit .grey{
-    background-color: grey;
-}
-
-.couleurproduit .blanc{
-    background-color: white;
-}
+/*Taille PRODUIT*/
 
 .tailleproduit {
-    border: solid 0.5px black;
-    margin: 2px;
-    display: inline-flex;
-    padding: 10px;
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+margin-top: 0px;
+border: solid 1.5px rgb(143, 10, 10);
+padding: 50px;
 }
 
-.tailleproduit .xs{
-    border: solid 0.5px black;
+.tailleproduit.s{
     margin: 2px;
-    display: inline-flex;
-    padding: 5px;
-}
-
-.tailleproduit .s{
+    padding: 5px; 
     border: solid 0.5px black;
-    margin: 2px;
-    display: inline-flex;
-    padding: 5px;
-}
+    height: 5px;
+    width: 10px;
+}   
 
 .tailleproduit .m{
     border: solid 0.5px black;
     margin: 2px;
-    display: inline-flex;
     padding: 5px;
+    height: 5px;
+    width: 10px;
 }
 
 .tailleproduit .l{
     border: solid 0.5px black;
     margin: 2px;
-    display: inline-flex;
     padding: 5px;
+    height: 5px;
+    width: 10px;
 }
 
 .tailleproduit .xl{
     border: solid 0.5px black;
     margin: 2px;
-    display: inline-flex;
     padding: 5px;
+    height: 5px;
+    width: 10px;
 }
 
 .tailleproduit .xl{
     border: solid 0.5px black;
     margin: 2px;
-    display: inline-flex;
     padding: 5px;
+    height: 5px;
+    width: 10px;
 }
 
-/* .matiereproduit {
-    margin:auto;
-    padding: auto;
-}
+/*description PRODUIT*/
 
 .descriptionproduit{
-    margin: auto;
-    
-} */
-
+margin: auto;
+} 

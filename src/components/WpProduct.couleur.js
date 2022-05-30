@@ -14,12 +14,10 @@ export default function ProductCouleur({ couleurs }) {
 
       {couleurs.map(function (couleur) {
         return (
-          <div className={`${couleur}`}> </div>
+          <div className={`${couleur.slug}`}> </div>
         )
       }
       )}
     </div>
   )
 }
-
-

@@ -11,7 +11,6 @@ export default function ProductTaille({ tailles }) {
   console.log ("ProductTaille", tailles)
   return (    
     <div className={tailleproduit}>
-      
       {tailles.map(taille => (
         <p className={tailleproduit}>{taille.name}</p>
       ))}
