@@ -3,18 +3,16 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
-    myimage,
+    myimage as myImageClass,
 } from '../css/ProductPage.module.css'
 
 export default function ProductImage({image}) {
 
-    console.log("ProductImage", image, myimage)
-
-    const myImage = getImage(image.localFile)
+    console.log("ProductImage", image)
 
     return ( 
-        <div className={myimage}>
-            <GatsbyImage image={myImage} alt={image.alText} />
+        <div className={myImageClass}>
+            <GatsbyImage image={image} alt={image.alText} />
         </div>
         
     );
