@@ -5,12 +5,10 @@ import Layout from '../../components/layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
-  titreproduit, contenu,
-  couleurproduit, coultaille,
-  coupeproduit,
-  tailleproduit,
-  matiereproduit,
-  descriptionproduit, containerproduit,
+ contenu,
+  couleurproduct, coupeproduct,
+  tailleproduct,
+  containerproduct,
   myimage as imageclass,
 
 } from '../../css/ProductPage.module.css'
@@ -52,46 +50,36 @@ export default function ProductPage(props) {
 
     <Layout>
 
-      <div className={containerproduit} row>
+      <div className={containerproduct}>
 
-        <div className={imageclass} col-6>
+        <div className={imageclass}>
           <ProductImagePage image={myImage} />
         </div>
 
-        <div className={contenu} col-6>
+        <div className={contenu}>
 
-          <span>
-            <h2 className={titreproduit}>
-              <ProductTitlePage title={name} sku={sku} price={price} />
-            </h2>
+
+          <ProductTitlePage title={name} sku={sku} price={price} />
+
+
+          <span className={couleurproduct}>
+            <ProductCouleurPage couleurs={listeCouleurs} />
           </span>
 
-          <div className={coultaille}>
+          <span className={tailleproduct}>
+            <ProductTaillePage tailles={listeTailles} />
+          </span>
 
-            <span className={couleurproduit}>
-              <ProductCouleurPage couleurs={listeCouleurs} />
-            </span>
-
-            <span className={tailleproduit}>
-              <ProductTaillePage tailles={listeTailles} />
-            </span>
-
-          </div>
 
           {allPaCoupe.nodes.map(Coupe => (
-            <p className={coupeproduit}>{Coupe.name}</p>
+            <p className={coupeproduct}>{Coupe.name}</p>
           ))}
 
-          <div className={matiereproduit}>
-            <ProductMatierePage matieres={listeMatieres} />
-          </div>
+          <ProductMatierePage matieres={listeMatieres} />
 
-          <div className={descriptionproduit}>
-            <ProductDescriptionPage description={description} />
-          </div>
+          <ProductDescriptionPage description={description} />
 
         </div>
-
       </div>
 
     </Layout >

@@ -3,9 +3,9 @@
 /*Composant*/
 
 /*Image PRODUIT*/
-.myimage{
+.myImageClass{
     height: 300px;
-    width: 100%;
+    width: 50%;
     border: solid 1.5px rgb(143, 10, 10);
     margin: auto;
     padding: auto;
@@ -17,17 +17,17 @@
     flex-direction: row;
 } 
 
-.titleproduit > h2{
+.titleproduit.titreproduit{
     text-transform: uppercase;
     color: black;
     width: 30%;
 }
-.titleproduit > p{
+.titleproduit.psku{
 /* width: 10%; */
 color: grey;
 } 
 
-.titleproduit > span{
+.titleproduit.priceproduit{
     margin: auto;
     padding: auto;
     color: blue;
@@ -91,43 +91,5 @@ width: 100%;
     flex-direction: column;
     }
 
-    .titreproduit{
-
-}
-
-.coultaille{
-
-}
-
-    .couleurproduit{
-
-}
-
-    .tailleproduit{
-
-}
-
-.descriptionproduit{
-
-}
-
-/* .couleursContairner > div{
-    width: 2em;
-    height: 2em;
-}  */
-
-
-/*.myimage{
-    height: 100%;
-    width: 100%;
-    border: solid 1.5px rgb(143, 10, 10);
-    margin: auto;
-    padding: auto;
-}
-
-.titleproduit{
-    display: flex;
-    flex-direction: row;
-} */
-
+ 
 
