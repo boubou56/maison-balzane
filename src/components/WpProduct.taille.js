@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   tailleproduit, taillesProduit,
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.taille.module.css'
 
 export default function ProductTaille({ tailles }) {
 

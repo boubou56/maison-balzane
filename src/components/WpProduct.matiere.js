@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   matiereproduit,
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.matiere.module.css'
 
 export default function ProductMatiere({ matieres }) {
   console.log ("ProductMatiere", matieres)

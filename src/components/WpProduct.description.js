@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   descriptionproduit,
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.description.module.css'
 
 export default function ProductDescription({description}) {
 

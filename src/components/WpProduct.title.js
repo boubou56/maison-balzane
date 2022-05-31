@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   titreproduit, titleproduit, psku, priceproduit
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.title.module.css'
 
 export default function ProductTitle({title, sku, price}) {
 

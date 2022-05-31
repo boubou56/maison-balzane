@@ -5,9 +5,8 @@ import Layout from '../../components/layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
- contenu,
-  couleurproduct, coupeproduct,
-  tailleproduct,
+  contenu,
+  coupeproduct,
   containerproduct,
   myimage as imageclass,
 
@@ -58,18 +57,11 @@ export default function ProductPage(props) {
 
         <div className={contenu}>
 
-
           <ProductTitlePage title={name} sku={sku} price={price} />
 
+          <ProductCouleurPage couleurs={listeCouleurs} />
 
-          <span className={couleurproduct}>
-            <ProductCouleurPage couleurs={listeCouleurs} />
-          </span>
-
-          <span className={tailleproduct}>
-            <ProductTaillePage tailles={listeTailles} />
-          </span>
-
+          <ProductTaillePage tailles={listeTailles} />
 
           {allPaCoupe.nodes.map(Coupe => (
             <p className={coupeproduct}>{Coupe.name}</p>
@@ -80,6 +72,7 @@ export default function ProductPage(props) {
           <ProductDescriptionPage description={description} />
 
         </div>
+
       </div>
 
     </Layout >

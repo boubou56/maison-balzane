@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
     myimage as myImageClass,
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.image.module.css'
 
 export default function ProductImage({image}) {
 

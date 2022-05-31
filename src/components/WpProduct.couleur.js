@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   couleursContairner,
-} from '../css/ProductPage.module.css'
+} from '../components/WpProduct.couleur.module.css'
 
 const colors = {
   blanc: 'white',

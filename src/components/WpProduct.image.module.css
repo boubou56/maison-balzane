@@ -1,0 +1,7 @@
+/*Image PRODUIT*/
+.myImageClass{
+    height: 300px;
+    width: 50%;
+    border: solid 1.5px rgb(143, 10, 10);
+   background-color: blueviolet;
+}
