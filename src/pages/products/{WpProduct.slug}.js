@@ -5,14 +5,14 @@ import Layout from '../../components/layout';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
-  titreproduit,
+  titreproduit, contenu,
   couleurproduit, coultaille,
   coupeproduit,
   tailleproduit,
   matiereproduit,
   descriptionproduit, containerproduit,
   myimage as imageclass,
-  
+
 } from '../../css/ProductPage.module.css'
 
 import ProductTitlePage from "../../components/WpProduct.title";
@@ -52,40 +52,44 @@ export default function ProductPage(props) {
 
     <Layout>
 
-      <div className={containerproduit}>
+      <div className={containerproduit} row>
 
-        <div className={imageclass}>
+        <div className={imageclass} col-6>
           <ProductImagePage image={myImage} />
         </div>
 
-        <div>
-          <h2 className={titreproduit}>
-            <ProductTitlePage title={name} sku={sku} price={price} />
-          </h2>
-        </div>
+        <div className={contenu} col-6>
 
-        <div className={coultaille}>
-
-          <span className={couleurproduit}>
-            <ProductCouleurPage couleurs={listeCouleurs} />
+          <span>
+            <h2 className={titreproduit}>
+              <ProductTitlePage title={name} sku={sku} price={price} />
+            </h2>
           </span>
 
-          <span className={tailleproduit}>
-            <ProductTaillePage tailles={listeTailles} />
-          </span>
+          <div className={coultaille}>
 
-        </div>
+            <span className={couleurproduit}>
+              <ProductCouleurPage couleurs={listeCouleurs} />
+            </span>
 
-        {allPaCoupe.nodes.map(Coupe => (
-          <p className={coupeproduit}>{Coupe.name}</p>
-        ))}
+            <span className={tailleproduit}>
+              <ProductTaillePage tailles={listeTailles} />
+            </span>
 
-        <div className={matiereproduit}>
-          <ProductMatierePage matieres={listeMatieres} />
-        </div>
+          </div>
 
-        <div className={descriptionproduit}>
-          <ProductDescriptionPage description={description} />
+          {allPaCoupe.nodes.map(Coupe => (
+            <p className={coupeproduit}>{Coupe.name}</p>
+          ))}
+
+          <div className={matiereproduit}>
+            <ProductMatierePage matieres={listeMatieres} />
+          </div>
+
+          <div className={descriptionproduit}>
+            <ProductDescriptionPage description={description} />
+          </div>
+
         </div>
 
       </div>
