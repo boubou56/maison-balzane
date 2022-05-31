@@ -6,13 +6,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
   titreproduit,
-  couleurproduit, 
+  couleurproduit, coultaille,
   coupeproduit,
-  tailleproduit, 
-  matiereproduit, 
+  tailleproduit,
+  matiereproduit,
   descriptionproduit, containerproduit,
   myimage as imageclass,
-  // priceproduit,
+  
 } from '../../css/ProductPage.module.css'
 
 import ProductTitlePage from "../../components/WpProduct.title";
@@ -59,27 +59,26 @@ export default function ProductPage(props) {
         </div>
 
         <div>
-              <h2 className={titreproduit}>
-                <ProductTitlePage title ={name} sku ={sku} price ={price} />
-              </h2>
-        </div> 
-        
-      </div>
+          <h2 className={titreproduit}>
+            <ProductTitlePage title={name} sku={sku} price={price} />
+          </h2>
+        </div>
+
+        <div className={coultaille}>
 
           <span className={couleurproduit}>
-            <ProductCouleurPage couleurs ={listeCouleurs} />
+            <ProductCouleurPage couleurs={listeCouleurs} />
           </span>
 
           <span className={tailleproduit}>
-            <ProductTaillePage tailles ={listeTailles} />
+            <ProductTaillePage tailles={listeTailles} />
           </span>
 
+        </div>
 
         {allPaCoupe.nodes.map(Coupe => (
           <p className={coupeproduit}>{Coupe.name}</p>
         ))}
-
-
 
         <div className={matiereproduit}>
           <ProductMatierePage matieres={listeMatieres} />
@@ -89,7 +88,7 @@ export default function ProductPage(props) {
           <ProductDescriptionPage description={description} />
         </div>
 
-     
+      </div>
 
     </Layout >
 

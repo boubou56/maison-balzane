@@ -4,9 +4,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
     myimage,
-} from '../components/ProductPage.module.css'
+} from '../css/ProductPage.module.css'
 
 export default function ProductImage({image}) {
+
+    console.log("ProductImage", image, myimage)
 
     const myImage = getImage(image.localFile)
 

@@ -22,7 +22,8 @@ export default function ProductCouleur({ couleurs }) {
         return (
           <div style={{
             backgroundColor: colors[couleur],
-          }}> </div>
+          }}> 
+          </div>
         )
       }
       )}

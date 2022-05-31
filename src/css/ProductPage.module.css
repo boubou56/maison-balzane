@@ -1,116 +1,131 @@
-/*Titre sku prix*/
+/*CSS Globale page Produit*/
 
-.containerproduit{
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-}
-.titreproduit{
-text-transform: uppercase;
-color: brown;
-width: 100%;
-justify-content: flex-end;
-}
-.psku{
-    margin: auto;
-}
-
-.priceprduit{
-    margin: auto;
-}
+/*Composant*/
 
 /*Image PRODUIT*/
-
 .myimage{
-bottom: 0;
-height: 100%;
-left: 0;
-margin: 0;
-max-width: none;
-padding: 0;
-position: absolute;
-right: 0;
-top: 0;
-width: 100%;
+    height: 300px;
+    width: 100%;
+    border: solid 1.5px rgb(143, 10, 10);
+    margin: auto;
+    padding: auto;
 }
+/*Titre sku prix PRODUIT*/
 
-/*Couleur PRODUIT*/
-.couleurproduit{
+.titleproduit{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 0px;
-    border: solid 1.5px rgb(143, 10, 10);
-    padding: 50px;
+} 
+
+.titleproduit > h2{
+    text-transform: uppercase;
+    color: black;
+    width: 30%;
 }
+.titleproduit > p{
+/* width: 10%; */
+color: grey;
+} 
+
+.titleproduit > span{
+    margin: auto;
+    padding: auto;
+    color: blue;
+}
+/*Couleur PRODUIT*/
+
+.couleursContairner{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+} 
 
 .couleursContairner > div{
     width: 2em;
     height: 2em;
-}
-
-.couleursContairner .gris{
-    background-color: gray;
-}
-
-
-.couleur.slug{
-border: solid 1.5px rgb(143, 10, 10);
+    margin: 10px;
+    padding: 10px;
+    border: solid 1.5px rgb(240, 240, 240);
 } 
-
 /*Taille PRODUIT*/
 
-.tailleproduit {
-display: flex;
+.taillesProduit{
+display: inline-flex;
 flex-direction: row;
 justify-content: flex-end;
-margin-top: 0px;
-border: solid 1.5px rgb(143, 10, 10);
-padding: 50px;
+margin: 10px;
+padding: 10px;
 }
 
-.tailleproduit.s{
-    margin: 2px;
-    padding: 5px; 
-    border: solid 0.5px black;
-    height: 5px;
-    width: 10px;
-}   
-
-.tailleproduit .m{
-    border: solid 0.5px black;
-    margin: 2px;
-    padding: 5px;
-    height: 5px;
-    width: 10px;
+.taillesProduit .tailleproduit{
+border: solid 1.5px rgb(0, 0, 0);
+width: 2,5em;
+height: 2em;
+padding: 5px;
+margin: 5px;
 }
-
-.tailleproduit .l{
-    border: solid 0.5px black;
-    margin: 2px;
-    padding: 5px;
-    height: 5px;
-    width: 10px;
-}
-
-.tailleproduit .xl{
-    border: solid 0.5px black;
-    margin: 2px;
-    padding: 5px;
-    height: 5px;
-    width: 10px;
-}
-
-.tailleproduit .xl{
-    border: solid 0.5px black;
-    margin: 2px;
-    padding: 5px;
-    height: 5px;
-    width: 10px;
-}
-
-/*description PRODUIT*/
+/*Description PRODUIT*/
 
 .descriptionproduit{
 margin: auto;
+padding: auto;
 } 
+
+/*Page entiere*/
+
+/* .containerproduit{
+display: flex;
+flex-direction: row;
+width: 100%;
+} */
+
+    .imageclass{
+    height: 100%;
+    width: 50%;
+}
+
+    .contenu{
+    height: 100%;
+    width: 50%;   
+    }
+
+    .titreproduit{
+
+}
+
+.coultaille{
+
+}
+
+    .couleurproduit{
+
+}
+
+    .tailleproduit{
+
+}
+
+.descriptionproduit{
+
+}
+
+/* .couleursContairner > div{
+    width: 2em;
+    height: 2em;
+}  */
+
+
+/*.myimage{
+    height: 100%;
+    width: 100%;
+    border: solid 1.5px rgb(143, 10, 10);
+    margin: auto;
+    padding: auto;
+}
+
+.titleproduit{
+    display: flex;
+    flex-direction: row;
+} */
+
+
