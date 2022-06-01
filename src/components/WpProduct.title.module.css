@@ -2,25 +2,31 @@
 
 .titleproduit{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    /* justify-content: flex-end; */
     background-color: rgb(232, 129, 11);
     margin: 10px;
     padding: 10px;
+    width: 50%;
 } 
 
 .titleproduit .titreproduit{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: black;
     width: 30%;
+    font-size: 20px;
 }
 
 .titleproduit .psku{
-/* width: 10%; */
+width: 10%;
 color: grey;
+
 } 
 
 .titleproduit .priceproduit{
     margin: auto;
     padding: auto;
     color: blue;
+    font-size: 20px;
+    width: 20%;
 }

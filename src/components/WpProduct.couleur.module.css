@@ -3,8 +3,11 @@
 .couleursContairner{
     display: inline-flex;
     flex-direction: row;
-    justify-content: flex-end;  
+    justify-content: flex-start;  
     background-color: rgb(173, 219, 21);
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
 } 
 
 .couleursContairner > div{

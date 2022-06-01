@@ -57,7 +57,7 @@ export default function ProductPage(props) {
 
         <div className={contenu}>
 
-          <ProductTitlePage title={name} sku={sku} price={price} />
+          <ProductTitlePage title={name} price={price} sku={sku} />
 
           <ProductCouleurPage couleurs={listeCouleurs} />
 

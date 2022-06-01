@@ -4,8 +4,8 @@
 /* .containerproduit{
 display: flex;
 flex-direction: row;
-width: 100%;
-} */
+width: 100%; 
+}
 
     /* .imageclass{
     height: 100%;
@@ -13,10 +13,8 @@ width: 100%;
 } */
 
     /* .contenu{
-    height: 100%;
-    width: 50%;
-    display: flex;   
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     }  */
 
     
