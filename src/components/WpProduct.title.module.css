@@ -7,7 +7,7 @@
     background-color: rgb(232, 129, 11);
     margin: 10px;
     padding: 10px;
-    width: 50%;
+    width: 100%;
 } 
 
 .titleproduit .titreproduit{
@@ -15,11 +15,13 @@
     color: black;
     width: 30%;
     font-size: 20px;
+    background-color:darkgreen
 }
 
 .titleproduit .psku{
 width: 10%;
 color: grey;
+background-color:yellow
 
 } 
 
@@ -29,4 +31,5 @@ color: grey;
     color: blue;
     font-size: 20px;
     width: 20%;
+    background-color:darkgrey
 }

@@ -1,16 +1,16 @@
 
 /*Page entiere*/
 
-/* .containerproduit{
-display: flex;
-flex-direction: row;
+.containerproduct{
+display: flex; 
+flex-direction: row; 
 width: 100%; 
 }
 
-    /* .imageclass{
-    height: 100%;
+    .imageclass{
+    display: block;
     width: 50%;
-} */
+} 
 
     /* .contenu{
     display: flex;
