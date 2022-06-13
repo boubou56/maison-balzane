@@ -4,7 +4,7 @@
 .containerproduct{
 display: flex; 
 flex-direction: row; 
-width: 100%; 
+width: auto; 
 }
 
     .imageclass{
@@ -12,10 +12,6 @@ width: 100%;
     width: 50%;
 } 
 
-    /* .contenu{
-    display: flex;
-    flex-direction: row;
-    }  */
 
     
  

@@ -8,6 +8,7 @@ import {
 
 export default function ProductDescription({description}) {
 
+  console.log("ProductDescription", description, descriptionproduit)
   return (
     <div className={descriptionproduit}>
       {parse(description)}

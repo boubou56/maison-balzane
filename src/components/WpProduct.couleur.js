@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import {
-  couleursContairner,
+  couleursContairner, couleurs, btncouleurs
 } from '../components/WpProduct.couleur.module.css'
 
 const colors = {
@@ -15,18 +15,24 @@ const colors = {
 
 export default function ProductCouleur({ couleurs }) {
 
+  const [color, setColor] = useState(null)
   console.log("ProductCouleur", couleurs, couleursContairner)
+  
   return (
     <div className={couleursContairner}>
       {couleurs.map(function (couleur) {
+
         return (
-          <div style={{
-            backgroundColor: colors[couleur],
+          <button className={btncouleurs} onClick={() => setColor({ couleurs })} style={{
+            backgroundColor: colors[couleur], 
           }}> 
-          </div>
+          
+          </button>
         )
+     
       }
-      )}
+      )
+      }
     </div>
   )
 }
