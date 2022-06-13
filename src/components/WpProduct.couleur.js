@@ -16,14 +16,14 @@ const colors = {
 export default function ProductCouleur({ couleurs }) {
 
   const [color, setColor] = useState(null)
-  console.log("ProductCouleur", couleurs, couleursContairner)
+  console.log("ProductCouleur", couleurs, couleursContairner, color)
   
   return (
     <div className={couleursContairner}>
       {couleurs.map(function (couleur) {
 
         return (
-          <button className={btncouleurs} onClick={() => setColor({ couleurs })} style={{
+          <button className={btncouleurs} onClick={() => setColor(couleur)} style={{
             backgroundColor: colors[couleur], 
           }}> 
           
