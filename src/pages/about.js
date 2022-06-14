@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { } from '../css/about.module.css'
 
-	const AproposPage = () => {
+	const AboutPage = () => {
   	return (
 
    	<Layout>
@@ -16,4 +16,4 @@ import { } from '../css/about.module.css'
 
  		)
 }
-		export default AproposPage
+		export default AboutPage

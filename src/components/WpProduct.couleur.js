@@ -16,7 +16,7 @@ const colors = {
 
 export default function ProductCouleur({ couleurs }) {
 
-  const {setCurrentProduct, currentProduct} = useContext(CartContext);
+  const { setCurrentProduct, currentProduct } = useContext(CartContext);
   const [color, setColor] = useState(null);
 
   const handleChangeColor = (selectedColor) => {
@@ -29,7 +29,7 @@ export default function ProductCouleur({ couleurs }) {
 
   console.log("ProductCouleur", couleurs, couleursContairner, color, currentProduct);
 
-  
+
   return (
     <div className={couleursContairner}>
       {couleurs.map(function (couleur) {
@@ -37,11 +37,11 @@ export default function ProductCouleur({ couleurs }) {
         return (
           <button className={btncouleurs} onClick={() => handleChangeColor(couleur)} style={{
             backgroundColor: colors[couleur], border: couleur === color ? 'solid red' : 'none'
-          }}> 
-          
+          }}>
+
           </button>
         )
-     
+
       }
       )
       }
