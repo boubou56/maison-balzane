@@ -36,7 +36,7 @@ export default function ProductCouleur({ couleurs }) {
 
         return (
           <button className={btncouleurs} onClick={() => handleChangeColor(couleur)} style={{
-            backgroundColor: colors[couleur], 
+            backgroundColor: colors[couleur], border: couleur === color ? 'solid red' : 'none'
           }}> 
           
           </button>

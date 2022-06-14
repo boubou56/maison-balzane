@@ -8,22 +8,15 @@ import {
 
 export default function ProductTaille({ tailles }) {
 
-  const [taille, setTaille] = useState(tailles)
+  const [tailleselectionne, setTaille] = useState(null)
 
-  console.log ("ProductTaille", tailles, taillesProduit, tailleproduit)
-  return (    
+  console.log("ProductTaille", tailles, taillesProduit, tailleproduit, tailleselectionne)
+  return (
     <div className={taillesProduit}>
       {tailles.map(taille => (
-        <button onClick={() => setTaille({tailles})} className={tailleproduit}>{taille.name}</button>
+        <button onClick={() => setTaille(taille.slug)} className={tailleproduit}
+          style={{ border: taille.slug === tailleselectionne ? 'solid red' : 'none' }}>{taille.name}</button>
       ))}
     </div>
   )
-  // return(
-  //   <div>
-  //        <p>Vous avez cliqué {taille} </p>   
-  //       <button onClick={() => setTaille({tailles})}>
-  //       Cliquez ici
-  //       </button>
-  //       </div> 
-  // )
 }
