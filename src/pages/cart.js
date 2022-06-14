@@ -2,10 +2,12 @@ import React, { useState, useMemo } from "react";
 import { CartContext } from "./context";
 import { useCart } from "react-use-cart";
 
-function Cart() {
+export default function CartPage(props) {
   const { addItem } = useCart();
 
-  const products = [];
+  const products = [
+    
+  ];
 
   return (
     <div>
