@@ -6,6 +6,7 @@ import parse from "html-react-parser"
 
 import Header from './header'
 import Footer from './footer'
+import { CartProvider } from "../contexts/CartProvider/provider";
 
 
 const Layout = ({ isHomePage, children }) => {
@@ -26,15 +27,17 @@ const Layout = ({ isHomePage, children }) => {
   `)
 
   return (
-    <div className={globalWrapper} data-is-root-path={isHomePage}>
+    <CartProvider>
+      <div className={globalWrapper} data-is-root-path={isHomePage}>
 
-      <Header />
+        <Header />
+          
+        <main className={main}>{children}</main> 
+
+        <Footer />
         
-      <main className={main}>{children}</main> 
-
-      <Footer />
-      
-    </div>
+      </div>
+    </CartProvider>
   )
 }
 
