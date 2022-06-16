@@ -85,7 +85,6 @@ export default function ProductPage(props) {
 export const query = graphql`
   query($id: String) {
     wpProduct(id: { eq: $id }) {
-     
      name
      sku
     slug

@@ -22,15 +22,13 @@ export const CartProvider = ({children}) => {
     setCart(newCart);
   }
 
-  const value = useMemo(() => {
-    return {
+  const value = {
       cart,
       currentProduct,
       addToCart,
       removeFromCart,
       setCurrentProduct: setCurrentProduct,
-    }
-  });
+    };
 
   return (
     <CartContext.Provider

@@ -1,69 +1,37 @@
-import React, { useState, useMemo } from "react";
-import { CartContext } from "./context";
-import { useCart } from "react-use-cart";
+import React, { useContext } from 'react'
+import Layout from '../components/layout';
+import { CartContext } from "../contexts/CartProvider/context";
+
 
 export default function CartPage(props) {
-  const { addItem } = useCart();
+const {cart} = useContext(CartContext);
 
-  const products = [
-    
-  ];
+console.log("Cart", cart);
 
   return (
-    <div>
-      {products.map((p) => (
-        <div key={p.id}>
-          <button onClick={() => addItem(p)}>Add to cart</button>
-        </div>
-      ))}
-    </div>
-  );
+    <Layout>
+
+    </Layout>
+  )
 }
 
-function Cart() {
-  const {
-    isEmpty,
-    totalUniqueItems,
-    items,
-    updateItemQuantity,
-    removeItem,
-  } = useCart();
-
-  if (isEmpty) return <p>Your cart is empty</p>;
-
-  return (
-    <>
-      <h1> Cart ({totalUniqueItems})</h1>
-
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.quantity} x {item.name} &mdash;
-            <button
-              onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
-            >
-              -
-            </button>
-            <button
-              onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
-            >
-              +
-            </button>
-            <button onClick={() => removeItem(item.id)}>&times;</button>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-}
-
-function App() {
-    return (
-      <CartContext.Provider
-      value={value}
-      >
-        {children}
-        <Cart />
-      </CartContext.Provider>
-    );
+export const query = graphql`
+query AllMyProducts {
+  allWpProduct {
+    nodes {
+      sku
+      name
+      image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(width: 200, layout: CONSTRAINED)
+          }
+        }
+      }
+      ... on WpSimpleProduct {
+       price
+      }
+    }
   }
+}
+`

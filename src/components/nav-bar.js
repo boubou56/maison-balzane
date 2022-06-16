@@ -15,15 +15,15 @@ export default function NavBar() {
 
 <ul className={menu}>
 
-    <li><Link to="/index">Accueil</Link></li>
+    <li><Link to="/">Accueil</Link></li>
     <li><Link to="/homme">Homme</Link></li>
     <li><Link to="/femme">Femme</Link></li>
     <li><Link to="/accessoires">Accessoires</Link></li>
     <li><Link to="/contact">Contact</Link></li>
     <li><Link to="/about">À propos</Link></li>
     <li><Link to="#">search<i class="fa-solid fa-magnifying-glass"></i></Link></li>
-    <li><Link to="#">compte<i class="fa-solid fa-user"></i></Link></li>
-    <li><Link to="#">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
+    <li><Link to="/compte">compte<i class="fa-solid fa-user"></i></Link></li>
+    <li><Link to="/cart">cart<i class="fa-solid fa-cart-shopping"></i></Link></li>
     
 </ul>
 
